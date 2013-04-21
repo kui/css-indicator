@@ -1,0 +1,25 @@
+@import "bourbon/bourbon";
+
+$name: heartbeat;
+
+div.heartbeat-indicator:before {
+  content: "Loading...";
+}
+div.heartbeat-indicator {
+}
+div.heartbeat-indicator:after {
+  content: "❤";
+  color: red;
+  @include inline-block;
+
+  @include animation($name 1s infinite);
+}
+
+@include keyframes($name) {
+  from, to {
+    @include transform(scale(.5));
+  }
+  50% {
+    @include transform(scale(1.5));
+  }
+}

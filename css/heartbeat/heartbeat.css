@@ -1,0 +1,43 @@
+@charset "UTF-8";
+div.heartbeat-indicator:before {
+  content: "Loading..."; }
+
+div.heartbeat-indicator:after {
+  content: "❤";
+  color: red;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  -webkit-animation: heartbeat 1s infinite;
+  -moz-animation: heartbeat 1s infinite;
+  animation: heartbeat 1s infinite; }
+
+@-webkit-keyframes heartbeat {
+  from, to {
+    -webkit-transform: scale(0.5); }
+
+  50% {
+    -webkit-transform: scale(1.5); } }
+
+@-moz-keyframes heartbeat {
+  from, to {
+    -moz-transform: scale(0.5); }
+
+  50% {
+    -moz-transform: scale(1.5); } }
+
+@-o-keyframes heartbeat {
+  from, to {
+    -o-transform: scale(0.5); }
+
+  50% {
+    -o-transform: scale(1.5); } }
+
+@keyframes heartbeat {
+  from, to {
+    transform: scale(0.5); }
+
+  50% {
+    transform: scale(1.5); } }
